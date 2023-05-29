@@ -1,0 +1,233 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+/* Imported Fonts */
+
+@font-face {
+    font-family: "lato-regular";
+    src:url('/blog/fonts/sans-serif/lato-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "rozhaone-regular";
+    src:url('/blog/fonts/serif/rozhaone-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "ultra-regular";
+    src:url('/blog/fonts/serif/ultra-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Typography */
+p{
+    font-family: lato-regular, arial, sans-serif;
+    letter-spacing: 0.0325rem;
+}
+h1, h2, h3, h4{
+    font-family: rozahaone-regular, arial, helvetica;
+}
+h1{
+    font-size: 3.5rem;
+    letter-spacing: 0.25rem;
+    transform: rotate(-3deg);
+}
+.highlight {
+    display: inline-block;
+    font-family: ultra-regular, 'Times New Roman', sans-serif;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    border-radius: 0.25rem;
+    border-top-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    color: lightpink;
+    background-color: brown;
+    box-shadow: 5px 5px 4px -1px #888;
+}
+
+
+/* General Setup and Defaults */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+/* Layout */
+header{
+    padding: 0.5rem 0rem 1rem 0rem;
+}
+nav{
+    margin-top: 2rem;
+}
+
+.main-section{
+    display:grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+}
+
+article{
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside{
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 1px solid black;
+    padding-left: .75rem;
+}
+aside p{
+    border-bottom: 1px solid black;
+    padding-bottom: 0.75rem;
+}
+
+.subsection{
+    display:flex;
+}
+
+
+/* Images and Figures */
+
+img {
+    width: 100%
+}
+figure { 
+    margin: 0px;
+}
+.article-image{
+    width: 33%;
+    float: left;
+    margin-right: .85rem;
+}
+.subsection{
+    margin: 1rem 0rem;
+}
+.subsection figure{
+    margin: 0rem 0.25rem;
+    background-color: lightgrey;
+}
+.subsection figure figcaption{
+    padding: 0.5rem 0.5rem;
+}
+/* Nav and Links */
+a{
+    text-decoration: none;
+}
+nav a{
+    display: inline-block;
+    padding: 1.35rem 2rem;
+    font-size: 1.25rem;
+    font-family: rozahaone-regular, arial, helvetica;
+    color: black;
+}
+nav{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+/* Nav Hover and Focus Customization */
+
+a:link, a:visited {
+    color: grey;
+
+}
+a:focus, a:hover {
+    text-decoration: none;
+
+}
+a {
+    outline: none;
+
+}
+
+nav a:focus, nav a:hover {
+    color: #fff;
+    background-color: lightgrey;
+}
+
+nav a:active {
+    color:#fff;
+    background-color: #000;
+}
+
+/*subscribe button*/
+
+button{
+    font-size: 3.5rem;
+    font-family: rozahaone-regular, arial, helvetica;
+    background-color: brown;
+    color: lightpink;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 0.75rem;
+}
+
+/* footer shift */
+footer{
+    text-align: right;
+}
+
+/* 3 dot customization */
+aside p a{
+    font-size: .25rem;
+}
+
