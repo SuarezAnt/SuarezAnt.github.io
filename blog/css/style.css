@@ -221,9 +221,13 @@ button{
     border-radius: 0.75rem;
 }
 
-/* footer shift */
-footer{
+/* footer shift and adjustments */
+footer p{
     text-align: right;
+    font-size: .85rem;
+}
+footer p1{
+    text-align: left;
 }
 
 /* 3 dot customization */
